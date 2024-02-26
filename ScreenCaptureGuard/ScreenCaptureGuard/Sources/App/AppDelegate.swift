@@ -25,7 +25,6 @@ private extension AppDelegate {
         window?.rootViewController = HomeViewController()
         window?.makeKeyAndVisible()
         
-        ScreenCaputreGuard.shared.window = window
         ScreenCaputreGuard.shared.startPreventing()
     }
 }

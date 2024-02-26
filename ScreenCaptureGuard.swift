@@ -16,19 +16,13 @@ final class ScreenCaputreGuard {
     /// Создание `ScreenCaputreGuard` общего класса, который гарантирует, что в приложении существует только один экземпляр
     static let shared: ScreenCaputreGuard = .init()
     
-    // MARK: - Properties
-    
-    var window: UIWindow?
-    
     // MARK: - Private Properties
     
     private var secureField: UITextField?
     private let alertView = UIView()
     
-    // MARK: - Lifecycle
-    
-    init() {
-        self.window = UIWindow(frame: UIScreen.main.bounds)
+    private var appWindow: UIWindow? {
+        return (UIApplication.shared.delegate as? AppDelegate)?.window
     }
     
     // MARK: - Deinit
@@ -63,7 +57,7 @@ private extension ScreenCaputreGuard {
     
     /// Создает secure text field на область всего окна экрана, не давая пользователям  делать записи и скриншоты.
     func makeScreenSecure() {
-        guard let window = window, secureField == nil else {
+        guard let window = appWindow, secureField == nil else {
             secureField?.isSecureTextEntry = true
             return
         }
@@ -95,12 +89,11 @@ private extension ScreenCaputreGuard {
         
         alertView.frame = window.bounds
         
-        let titleLabel = createLabel(font: .boldSystemFont(ofSize: 24), text: "Внимание", color: .gray)
-        let subtitleLabel = createLabel(font: .boldSystemFont(ofSize: 16), text: "Запись экрана запрещена", color: .gray.withAlphaComponent(0.8))
+        let titleLabel = createLabel(font: .boldSystemFont(ofSize: 24), text: "Внимание", color: .black)
+        let subtitleLabel = createLabel(font: .boldSystemFont(ofSize: 16), text: "Запись экрана запрещена", color: .black.withAlphaComponent(0.8))
         let stackView = createStackView(with: [createImageView(), titleLabel, subtitleLabel])
         
-        alertView.addSubview(blurVisualEffectView)
-        alertView.addSubview(stackView)
+        alertView.addSubviews(blurVisualEffectView, stackView)
         
         stackView.snp.makeConstraints {
             $0.centerY.equalToSuperview()
@@ -134,7 +127,7 @@ private extension ScreenCaputreGuard {
     /// Предотвращает снятие экрана, отображая предупреждение в случае его обнаружения.
     @objc private func preventScreenRecording() {
         if UIScreen.main.isCaptured {
-            guard let window = window else { return }
+            guard let window = appWindow else { return }
             makeScreenCaptureView(window: window)
         } else {
             alertView.removeFromSuperview()

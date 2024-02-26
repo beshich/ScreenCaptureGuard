@@ -13,6 +13,7 @@
 		8E5547A02B8B5FBB005D10D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E55479F2B8B5FBB005D10D1 /* Assets.xcassets */; };
 		8E5547A32B8B5FBB005D10D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5547A12B8B5FBB005D10D1 /* LaunchScreen.storyboard */; };
 		8E5547B72B8C68FD005D10D1 /* ScreenCaptureGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5547B62B8C68FD005D10D1 /* ScreenCaptureGuard.swift */; };
+		8E5547B92B8C88D7005D10D1 /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5547B82B8C88D7005D10D1 /* UIView + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		8E5547A22B8B5FBB005D10D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E5547A42B8B5FBB005D10D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E5547B62B8C68FD005D10D1 /* ScreenCaptureGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScreenCaptureGuard.swift; path = ../../../../../ScreenCaptureGuard.swift; sourceTree = "<group>"; };
+		8E5547B82B8C88D7005D10D1 /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView + Extensions.swift"; path = "../../../../../UIView + Extensions.swift"; sourceTree = "<group>"; };
 		B0A441B9E8321DE0D156DECC /* Pods-ScreenCaptureGuard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenCaptureGuard.debug.xcconfig"; path = "Target Support Files/Pods-ScreenCaptureGuard/Pods-ScreenCaptureGuard.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +165,7 @@
 		8E5547B42B8C663F005D10D1 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				8E5547B82B8C88D7005D10D1 /* UIView + Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E5547B92B8C88D7005D10D1 /* UIView + Extensions.swift in Sources */,
 				8E5547B72B8C68FD005D10D1 /* ScreenCaptureGuard.swift in Sources */,
 				8E55479B2B8B5FBA005D10D1 /* HomeViewController.swift in Sources */,
 				8E5547972B8B5FBA005D10D1 /* AppDelegate.swift in Sources */,
