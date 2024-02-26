@@ -22,7 +22,10 @@ private extension AppDelegate {
     
     func setupRootView() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = ViewController()
+        window?.rootViewController = HomeViewController()
         window?.makeKeyAndVisible()
+        
+        ScreenCaputreGuard.shared.window = window
+        ScreenCaputreGuard.shared.startPreventing()
     }
 }
