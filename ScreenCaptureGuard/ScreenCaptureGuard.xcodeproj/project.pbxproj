@@ -52,13 +52,93 @@
 		8E5547952B8B5FBA005D10D1 /* ScreenCaptureGuard */ = {
 			isa = PBXGroup;
 			children = (
-				8E5547962B8B5FBA005D10D1 /* AppDelegate.swift */,
-				8E55479A2B8B5FBA005D10D1 /* ViewController.swift */,
-				8E55479F2B8B5FBB005D10D1 /* Assets.xcassets */,
-				8E5547A12B8B5FBB005D10D1 /* LaunchScreen.storyboard */,
-				8E5547A42B8B5FBB005D10D1 /* Info.plist */,
+				8E5547AB2B8C5B12005D10D1 /* Resources */,
+				8E5547AA2B8C5AF3005D10D1 /* Sources */,
 			);
 			path = ScreenCaptureGuard;
+			sourceTree = "<group>";
+		};
+		8E5547AA2B8C5AF3005D10D1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8E5547AF2B8C5BE6005D10D1 /* App */,
+				8E5547B02B8C5BEC005D10D1 /* Modules */,
+				8E5547B32B8C5C1A005D10D1 /* Utilis */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		8E5547AB2B8C5B12005D10D1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8E5547AC2B8C5B2A005D10D1 /* Assets */,
+				8E5547AE2B8C5BC3005D10D1 /* InfoPlist */,
+				8E5547AD2B8C5BB2005D10D1 /* LaunchScreen */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8E5547AC2B8C5B2A005D10D1 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8E55479F2B8B5FBB005D10D1 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		8E5547AD2B8C5BB2005D10D1 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8E5547A12B8B5FBB005D10D1 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		8E5547AE2B8C5BC3005D10D1 /* InfoPlist */ = {
+			isa = PBXGroup;
+			children = (
+				8E5547A42B8B5FBB005D10D1 /* Info.plist */,
+			);
+			path = InfoPlist;
+			sourceTree = "<group>";
+		};
+		8E5547AF2B8C5BE6005D10D1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8E5547962B8B5FBA005D10D1 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8E5547B02B8C5BEC005D10D1 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8E5547B12B8C5BF5005D10D1 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8E5547B12B8C5BF5005D10D1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8E5547B22B8C5BFA005D10D1 /* ViewController */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8E5547B22B8C5BFA005D10D1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8E55479A2B8B5FBA005D10D1 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8E5547B32B8C5C1A005D10D1 /* Utilis */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilis;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,7 +358,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B9J7Z98MMQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ScreenCaptureGuard/Info.plist;
+				INFOPLIST_FILE = ScreenCaptureGuard/Resources/InfoPlist/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -305,7 +385,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B9J7Z98MMQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ScreenCaptureGuard/Info.plist;
+				INFOPLIST_FILE = ScreenCaptureGuard/Resources/InfoPlist/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
