@@ -7,14 +7,14 @@
 ## Usage:
 
      func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        ScreenCaputreGuard.shared.startPreventing
+        ScreenCaputreGuard.shared.startPreventing()
         return true
     }
 
 > ### You can call anywhere in your class to suit your needs
 
 We prohibit the capture and recording of our screen: 
-`ScreenCaputreGuard.shared.startPreventing`
+`ScreenCaputreGuard.shared.startPreventing()`
 
 Allow the capture and recording of our screen:
- `ScreenCaputreGuard.shared.stopPreventing`
+ `ScreenCaputreGuard.shared.stopPreventing()`
