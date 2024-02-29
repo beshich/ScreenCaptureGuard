@@ -13,7 +13,7 @@ final class ScreenCaputreGuard {
     
     // MARK: - Static Properties
     
-    /// Создание `ScreenCaputreGuard` общего класса, который гарантирует, что в приложении существует только один экземпляр
+    /// Создание `ScreenCaputreGuard` общего класса
     static let shared: ScreenCaputreGuard = .init()
     
     // MARK: - Private Properties
@@ -26,7 +26,7 @@ final class ScreenCaputreGuard {
     }
     
     // MARK: - Deinit
-    /// Деинициализирует instance `ScreenCaputreGuard` и удаляет notification observers.
+    /// Деинициализирует `ScreenCaputreGuard` и удаляет notification observers.
     deinit {
         removeNotificationObservers()
     }
@@ -36,7 +36,7 @@ final class ScreenCaputreGuard {
 
 extension ScreenCaputreGuard {
     
-    /// Активирует предотвращение записи экрана, сделав экран безопасным и добавив notification observers.
+    /// Активирует предотвращение записи экрана, добавив notification observers.
     func startPreventing() {
         makeScreenSecure()
         addNotificationObservers()
@@ -103,7 +103,7 @@ private extension ScreenCaputreGuard {
         window.addSubview(alertView)
     }
     
-    /// Добавляет notification observers для событий снятия экрана и скриншотов.
+    /// Добавляет notification observers при записи экрана и скриншота.
     func addNotificationObservers() {
         DispatchQueue.main.async {
             NotificationCenter.default.addObserver(self, selector: #selector(self.preventScreenRecording), name: UIScreen.capturedDidChangeNotification, object: nil)
@@ -124,7 +124,7 @@ private extension ScreenCaputreGuard {
 
 private extension ScreenCaputreGuard {
     
-    /// Предотвращает снятие экрана, отображая предупреждение в случае его обнаружения.
+    /// Предотвращает запись экрана
     @objc private func preventScreenRecording() {
         if UIScreen.main.isCaptured {
             guard let window = appWindow else { return }
@@ -134,7 +134,7 @@ private extension ScreenCaputreGuard {
         }
     }
     
-    /// Предотвращает снятие скриншота, отображая верхнее предупреждение.
+    /// Предотвращает скриншот
     @objc private func preventScreenshot() {
         makeScreenSecure()
     }
